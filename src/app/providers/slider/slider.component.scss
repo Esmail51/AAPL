@@ -1,0 +1,41 @@
+.slider {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider div {
+    display: none;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .slider div.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .slider img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
