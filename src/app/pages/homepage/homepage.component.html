@@ -1,0 +1,297 @@
+<header>
+   <nav class="desktop-nav">
+    <ul class="align">
+      <li><a routerLink="/"><img src="../../../assets/img/logo-2.png" width="60"></a></li>
+      <li><a (click)="scrollTo('#home')">ACUTE AUTOMATION</a></li>
+      <li class="w5"></li>
+      <li><a (click)="scrollTo('#home')">Home</a></li>
+      <li><a (click)="scrollTo('#about')">About</a></li>
+      <li><a (click)="scrollTo('#services')">Services</a></li>
+      <li><a (click)="scrollTo('#Projects')">Projects</a></li>
+      <li><a (click)="scrollTo('#contact')">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sidebar Navigation for Small Screens -->
+  <nav class="mobile-nav nav-small" [ngClass]="{ 'open': isMenuOpen }">
+    <div [ngClass]="{'none': isMenuOpen}" class="nav-img">
+      <a routerLink="/"><img src="../../../assets/img/logo-2.png" width="60"></a>
+    </div>
+    <div *ngIf="!isToggleButtonClicked" class="mobilenav-head">
+      <p>ACUTE AUTOMATION</p>
+    </div>
+    <div class="menu-toggle" *ngIf="!isToggleButtonClicked" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu" *ngIf="isMenuOpen">
+      <div class="off-canvas-top">
+        <div>
+          <a  routerLink="/"><img src="../../../assets/img/logo-2.png" width="60">ACUTE AUTOMATION</a>
+        </div>
+        <div class="close-sidebar" *ngIf="isMenuOpen" (click)="closeMenu()">
+          <span>&times;</span></div>
+      </div>
+      <ul>
+      <li><a (click)="scrollTo('#home')">Home</a></li>
+      <li><a (click)="scrollTo('#about')">About</a></li>
+      <li><a (click)="scrollTo('#services')">Services</a></li>
+      <li><a (click)="scrollTo('#Projects')">Projects</a></li>
+      <li><a (click)="scrollTo('#contact')">Contact us</a></li>
+    </ul>
+    </div>
+  </nav>
+  
+</header>
+
+<div class="fluid-container vedio-container"[ngClass]="{'fade': isMenuOpen}" id="home">
+  <video autoplay muted loop>
+    <source src="../../../assets/videos/Banner-vid - Made with Clipchamp.mp4" type="video/mp4" />
+  </video>
+</div>
+<div class="fluid-container con-banner">
+
+  <div class="fluid-container banner-con">
+  <div class="row Banner-down">
+    <div class="col-lg-4">
+      <div class="p-70">
+      <img src="../../../assets/img/Banner-down.png">
+    </div>
+    <div class="org-box"></div>
+    </div>
+    <div class="col-lg-4">
+      <div class="p-70">
+      <img src="../../../assets/img/About.png">
+    </div>
+    <div class="org-box"></div>
+    </div>
+    <div class="col-lg-4">
+        <div class="p-70">
+        <img src="../../../assets/img/Service-1.png">
+      </div>
+      <div class="org-box"></div>
+    </div>
+  </div>
+</div>
+
+  <!-- About -->
+  <div class="fluid-container about-outbox" id="about">
+    <div class="row">
+      <div class="about col-lg-6 p-0">
+        <h2>About us</h2>
+        <p class="hor-line"></p>
+        <p>We cover a large range of creative projects,
+          platforms, & campaigns with one purpose -
+          create value</p>
+        <p><span>Acute Automation Pte Ltd</span> was established in 2013
+          provide the high quality control and automation
+          solutions for required industry. We focuses on a system
+          integrator for a wide spectrum of industries in cost
+          effective manner. Acute Automation Pte Ltd provide
+          process control solutions that utilize SCADA, distributed
+          control systems, programmable logic controllers (PLCs),
+          motors, drives and plant transducers. Many of our
+          critical solutions are used in highly integrity
+          environments such as oil & gas, waste water treatment
+          plant, with client processes being wholly dependent on
+          the control system</p>
+      </div>
+      <div class="col-lg-6 p-0 about-us">
+        <div class="about-box">
+          <img src="../../../assets/img/About.png">
+          <div class="about-box_name">
+            <p>Programmable Logic Controller (PLC)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- services -->
+<div class="container service" id="services">
+  <h2>Services</h2>
+  <p class="hor-line"></p>
+  <div class="row">
+    <div class="col-lg-4 service-inner">
+      <div>
+        <img src="../../../assets/img/Service-1.png" class="serviceImg">
+      </div>
+      <div class="service-inner2">
+        <div class="service-subhead">
+          <p>PLC</p>
+        </div>
+        <p>SCADA/PLC/DDC We specialize in PLC, SCADA, and DDC programming, delivering tailored solutions for industrial
+          automation and control systems. Our expert team ensures reliability, efficiency, and seamless integration,
+          empowering your operations to thrive. Get in touch today to streamline your processes and maximize
+          productivity.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 service-inner">
+      <div>
+        <img src="../../../assets/img/Service-2.png" class="serviceImg">
+      </div>
+      <div class="service-inner2">
+        <div class="service-subhead">
+          <p>Industrial Calibration</p>
+        </div>
+        <p>Calibration we excel in instrument calibration, ensuring accuracy and reliability in your measurement
+          equipment. Our expert technicians meticulously calibrate instruments to industry standards, guaranteeing
+          optimal performance in critical processes. Trust us to calibrate your instruments with precision, enhancing
+          the quality and efficiency of your operations.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 service-inner">
+      <div>
+        <img src="../../../assets/img/Service-3.png" class="serviceImg">
+      </div>
+      <div class="service-inner2">
+        <div class="service-subhead">
+          <p>Field Cable Installation</p>
+        </div>
+        <p>Field Installation we specialize in expert field cable installation, ensuring reliable connectivity for your
+          industrial systems. Our skilled technicians meticulously install and manage cables, optimizing signal
+          integrity and minimizing downtime. Trust us to deliver seamless connectivity solutions, empowering your
+          operations to thrive</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Projects section -->
+<div class="fluid-container project-container" id="Projects">
+  <div class="head">
+    <h2>Projects</h2>
+    <p class="hor-line"></p>
+  </div>
+  
+  <div class="con">
+    <div class="row">
+      <div class="col-lg-4">
+        <div>
+          <img src="../../../assets/img/resorts.png" alt="Image 1">
+          <p>Resorts World Sentosa</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div>
+          <img src="../../../assets/img/global-img.png" alt="Image 2">
+          <p>Global Foundries</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div>
+          <img src="../../../assets/img/tintachos-img.png" alt="Image 3">
+          <p>Tan Toc Seng Hospital</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div>
+          <img src="../../../assets/img/airliqude.png" alt="Image 4">
+          <p>Air Liquide</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div>
+          <img src="../../../assets/img/projectsImg5.png" alt="Image 5">
+          <p>Pfizer</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div>
+          <img src="../../../assets/img/projectsImg-6.png" alt="Image 6">
+          <p>SSMC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="photo-grid pt-100"></div> -->
+</div>
+
+<div class="fluid-container clients-con">
+  <div class="head">
+    <h2>Clients</h2>
+    <p class="hor-line"></p>
+  </div>
+  <div class="con pt-40">
+    <div class="row">
+      <div class="col-lg-4 shadow">
+        <img src="../../../assets/img/clientsImg-1.png" alt="Image 1">
+      </div>
+      <div class="col-lg-4 shadow">
+        <img src="../../../assets/img/clientsImg-2.png" alt="Image 2">
+      </div>
+      <div class="col-lg-4 shadow p-40">
+        <img src="../../../assets/img/clientsImg-3.png" alt="Image 3">
+      </div>
+    </div>
+    <div class="row pt-40">
+      <div class="col-lg-4 col-sm-auto shadow">
+
+        <img src="../../../assets/img/clientsImg-4.png" alt="Image 4">
+
+      </div>
+      <div class="col-lg-4 col-sm-auto shadow">
+
+        <img src="../../../assets/img/clientsImg-5.png" alt="Image 5">
+
+      </div>
+      <div class="col-lg-4 col-sm-auto shadow p-30">
+
+        <img src="../../../assets/img/clientsImg-6.png" alt="Image 6">
+
+      </div>
+    </div>
+    <div class="row pt-40 ">
+      <div class="col-lg-4 col-sm-auto shadow">
+
+        <img src="../../../assets/img/clientsImg-7.png" alt="Image 6">
+
+      </div>
+      <div class="col-lg-4 col-sm-auto shadow p-30">
+
+        <img src="../../../assets/img/clientsImg-8.png" alt="Image 6">
+
+      </div>
+      <div class="col-lg-4 col-sm-auto shadow">
+
+        <img src="../../../assets/img/clientsImg-9.png" class="clientImg-9">
+
+      </div>
+    </div>
+  </div>
+  <!-- <div class="client-grid pt-100"></div> -->
+
+</div>
+
+<footer id="contact">
+  <div class="cert-box">
+  <div>
+  <p style="color: black;">Acute Automation PTE LTD</p>
+  <p><span>Email :</span> sales@acute-automation.com</p>
+  <p><span>Phone no:</span> +65-94881436 +65 92970455</p>
+  <p><span>Address:</span> #03-10 23 Tagore Lane, Singapore,</p>
+</div>
+  <div >
+    <img src="../../../assets/img/ISO-Cert.png" class="cert-img" width="200">
+  </div>
+</div>
+
+  <div class="arrow-up">
+    <img src="../../../assets/img/up-arrow.png" width="50" (click)="scrollTo('#home')">
+  </div>
+  <div class="Copyright">
+    <p>Copyright © 2024 Acute Automation Pte Ltd</p>
+  </div>
+</footer>
+
+</div>
+
+
+
+
+
+
+

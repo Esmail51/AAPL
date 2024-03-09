@@ -1,0 +1,35 @@
+header {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+   justify-content: space-evenly;
+  padding: 20px;
+  font-size: 20px;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+    color: aquamarine;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+
+.w5 {
+  width: 5%;
+}
+.w100 {
+  width: 110px;
+}
+.w50 {
+  width: 50px;
+}
+  
