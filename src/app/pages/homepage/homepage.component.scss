@@ -522,6 +522,9 @@ hr {
     padding: 16px;
     height: 100%;
 }
+.clients-con img {
+  max-width: 50%;
+}
 }
 
 @media (max-width: 1024px) {
@@ -558,11 +561,6 @@ hr {
   }
   .about-us {
     justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  .clients-con img {
-    max-width: 50%;
   }
 }
 @media (max-width: 650px) {
@@ -605,7 +603,20 @@ hr {
 }
 @media (max-width: 481px) {
   .about-outbox {
-    padding: 50px;
+    padding: 45px;
+  }
+}
+@media (max-width: 580px) {
+  .clients-con img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .p-40 {
+    padding: 60px;
+  }
+  .pt-40 {
+    padding: 0;
   }
 }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-devic-pixel-ratio: 1.5) and (orientation: portrait){

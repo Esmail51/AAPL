@@ -1,5 +1,5 @@
-import { Component, HostListener , OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, ElementRef ,ViewChild, OnInit } from '@angular/core';
+// import { IntersectionObserver } from '@angular/cdk/observers'
 
 @Component({
   selector: 'app-homepage',
@@ -7,8 +7,20 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
+  @ViewChild('vedioRef') videoRef!: ElementRef<HTMLVideoElement>
   isToggleButtonClicked: boolean = false;
+  private observer : IntersectionObserver | null = null;
   ngOnInit() {
+    this.observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        this.videoRef.nativeElement.src = '../../../assets/videos/Banner-480p - Made with Clipchamp.mp4'
+        this.observer?.unobserve(this.videoRef.nativeElement);
+      }
+    })
+  }
+
+  ngAfterViewInit(){
+    this.observer?.observe(this.videoRef.nativeElement)
   }
 
   scrollTo(elementId: string): void {
