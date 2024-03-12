@@ -45,11 +45,10 @@
   
 </header>
 
-<div class="fluid-container vedio-container"[ngClass]="{'fade': isMenuOpen}" id="home">
-  <video autoplay muted loop preload="metadata">
+  <video autoplay muted loop preload="metadata" [ngClass]="{'fade': isMenuOpen}" id="home">
     <source #vedioRef src="../../../assets/videos/Banner-480p - Made with Clipchamp.mp4"  />
   </video>
-</div>
+  
 <div class="fluid-container con-banner">
 
   <div class="fluid-container banner-con">
@@ -206,8 +205,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="photo-grid pt-100"></div> -->
 </div>
 
 <div class="fluid-container clients-con">
@@ -262,7 +259,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="client-grid pt-100"></div> -->
 
 </div>
 

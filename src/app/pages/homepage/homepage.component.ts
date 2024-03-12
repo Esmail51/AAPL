@@ -28,6 +28,7 @@ export class HomepageComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       this.enableScroll();
+      this.closeMenu()
     }
   }
   isMenuOpen: boolean = false;
