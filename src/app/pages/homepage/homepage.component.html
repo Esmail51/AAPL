@@ -45,9 +45,11 @@
   
 </header>
 
-  <video autoplay muted loop preload="metadata" [ngClass]="{'fade': isMenuOpen}" id="home">
-    <source #vedioRef src="../../../assets/videos/Banner-480p - Made with Clipchamp.mp4" type="video/mp4"  />
-  </video>
+  <div class="fluid-container vedio-container"[ngClass]="{'fade': isMenuOpen}" id="home">
+  <video>
+  <source src="https://youtu.be/JQ44-OEJFsw?si=Nnq0a_KrgQFjeFAk" type="video/mp4">
+</video>
+</div>
   
 <div class="fluid-container con-banner">
 
